@@ -1,19 +1,16 @@
 package at.ac.fhcampuswien.command;
 
-/**
-* Corresponds to the ConcreteCommand
-*/
 public class CopyCommand extends Command
 {
-    Document receiver;
+    Document receiverDoc;
     
-    public CopyCommand(Document receiver)
+    public CopyCommand(Document doc)
     {
-        this.receiver = receiver;
+        this.receiverDoc = doc;
     }
     
     public void execute()
     {
-        receiver.copy();
+    	receiverDoc.copy();
     }
 }

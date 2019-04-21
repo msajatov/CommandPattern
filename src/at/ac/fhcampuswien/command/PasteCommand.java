@@ -1,19 +1,16 @@
 package at.ac.fhcampuswien.command;
 
-/**
-* Corresponds to the ConcreteCommand
-*/
 public class PasteCommand extends Command
 {
-    Document receiver;
+    Document receiverDoc;
     
-    PasteCommand(Document receiver)
+    PasteCommand(Document doc)
     {
-        this.receiver = receiver;
+        this.receiverDoc = doc;
     }
     
     public void execute()
     {
-        receiver.paste();
+    	receiverDoc.paste();
     }
 }

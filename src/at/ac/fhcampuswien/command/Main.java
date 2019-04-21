@@ -4,20 +4,17 @@ public class Main
 {
     public static void main(String[] args)
     {
-    	Document receiver = new Document("doc1");
+    	Document doc = new Document("doc1");
     	
-    	MenuItem copyInvoker = new MenuItem();                
-        Command command = new CopyCommand(receiver);
-        copyInvoker.storeCommand(command);     
+    	MenuItem copyMenuItem = new MenuItem();                
+        Command copyCommand = new CopyCommand(doc);
+        copyMenuItem.storeCommand(copyCommand);             
         
-        // at some point later
-        copyInvoker.operation();
+        MenuItem pasteMenuItem = new MenuItem();
+        Command pasteCommand = new PasteCommand(doc);
+        pasteMenuItem.storeCommand(pasteCommand);
         
-        MenuItem pasteInvoker = new MenuItem();
-        command = new PasteCommand(receiver);
-        pasteInvoker.storeCommand(command);
-        
-        // at some point later
-        pasteInvoker.operation();
+        copyMenuItem.operation();
+        pasteMenuItem.operation();
     }
 }

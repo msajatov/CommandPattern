@@ -1,25 +1,21 @@
 package at.ac.fhcampuswien.command;
 
-/**
-* Corresponds to the ConcreteReceiver
-*/
-
 public class Document
 {
-    private String name;
+    private String documentName;
     
     public Document(String name)
     {
-        this.name = name;
+        this.documentName = name;
     }
             
     public void copy()
     {
-    	System.out.println("handling copy in " + name);
+    	System.out.println("handling copy in " + documentName);
     }
     
     public void paste()
     {
-    	System.out.println("handling paste in " + name);
+    	System.out.println("handling paste in " + documentName);
     }
 }
