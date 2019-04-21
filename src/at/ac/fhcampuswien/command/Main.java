@@ -14,7 +14,7 @@ public class Main
         Command pasteCommand = new PasteCommand(doc);
         pasteMenuItem.storeCommand(pasteCommand);
         
-        copyMenuItem.operation();
-        pasteMenuItem.operation();
+        copyMenuItem.invoke();
+        pasteMenuItem.invoke();
     }
 }

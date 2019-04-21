@@ -9,7 +9,7 @@ public class MenuItem
         this.command = command;
     }
     
-    public void operation()
+    public void invoke()
     {
         command.execute();
     }
